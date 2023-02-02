@@ -1,0 +1,40 @@
+
+
+
+::::::SessionLog::::
+17
+
+
+ name :cycling target interval : 1.000000completed : 1.000000target distance : 4.000000 Completed : 2.000000 targeted pace :1.000000 completed pace : 2.000000 score : 0.750000 percent : 75.000000 completed : 0
+
+ name :cycling target interval : 1.200000completed : 3.000000target distance : 4.000000 Completed : 2.000000 targeted pace :2.000000 completed pace : 0.666667 score : 0.416667 percent : 41.666667 completed : 0
+
+ name :cycling target interval : 1.500000completed : 4.000000target distance : 4.000000 Completed : 2.000000 targeted pace :3.000000 completed pace : 0.500000 score : 0.333333 percent : 33.333333 completed : 0
+
+ name :cycling target interval : 1.000000completed : 3.000000target distance : 4.000000 Completed : 1.000000 targeted pace :3.000000 completed pace : 0.333333 score : 0.180556 percent : 18.055556 completed : 0
+
+ name :cycling target interval : 1.200000completed : 3.000000target distance : 4.000000 Completed : 2.000000 targeted pace :3.000000 completed pace : 0.666667 score : 0.361111 percent : 36.111111 completed : 0
+
+ name :cycling target interval : 1.400000completed : 3.000000target distance : 4.000000 Completed : 1.000000 targeted pace :2.000000 completed pace : 0.333333 score : 0.208333 percent : 20.833333 completed : 0
+
+ name :cycling target interval : 1.400000completed : 4.000000target distance : 4.000000 Completed : 1.000000 targeted pace :1.000000 completed pace : 0.250000 score : 0.250000 percent : 25.000000 completed : 0
+
+ name :cycling target interval : 0.700000completed : 1.000000target distance : 4.000000 Completed : 1.000000 targeted pace :2.000000 completed pace : 1.000000 score : 0.375000 percent : 37.500000 completed : 0
+
+ name :running target interval : 1.000000completed : 3.000000target distance : 10.000000 Completed : 1.000000 targeted pace :1.000000 completed pace : 0.333333 score : 0.216667 percent : 21.666667 completed : 0
+
+ name :bicep-curl Completed Reps : 6.000000 Completed Weight : 11.000000 score : 0.000000 percent : 0.000000 completed : 0
+
+ name :deadlift Completed Reps : 17.000000 Completed Weight : 5.000000 score : 50.000000 percent : 50.000000 completed : 0
+
+ name :jumping-squats time : 40.000000 rest : 1.000000 score : 0.408333 percent : 40.833333 completed : 0
+
+ name :bicep-curl Completed Reps : 7.000000 Completed Weight : 5.000000 score : 0.000000 percent : 0.000000 completed : 0
+
+ name :deadlift Completed Reps : 19.000000 Completed Weight : 7.000000 score : 50.000000 percent : 50.000000 completed : 0
+
+ name :jumping-squats time : 40.000000 rest : 9.000000 score : 0.641667 percent : 64.166667 completed : 0
+
+ name :swimming target interval : 1000.000000completed : 4.000000target distance : 15.000000 Completed : 1.000000 targeted pace :3.000000 completed pace : 0.002500 score : 0.033750 percent : 3.375000 completed : 0
+
+ name :running target interval : 3.000000completed : 3.000000target distance : 20.000000 Completed : 2.000000 targeted pace :1.000000 completed pace : 0.666667 score : 0.383333 percent : 38.333333 completed : 0

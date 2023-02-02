@@ -1,0 +1,121 @@
+// Created by PARSA on 11/11/2022.
+// SessionLog.h
+// class invariants : main part of the object is the
+//              double pointer array of workouts that
+//              makes this heterogeneous collection working
+//              without object slicing. used composition
+//              of workout objects.
+
+// interface invariants : same date is applied to all objects
+//                       to demonstrate the sessionLog class but
+//                       can be changed in real life situations.
+
+#ifndef P4_SESSIONLOG_H
+#define P4_SESSIONLOG_H
+#include "workout.h"
+
+class SessionLog
+{
+private :
+    Workout** arr = nullptr ;
+    int count;
+    int size;
+    bool sessionValid;
+    string date = "11/13/2022" ;
+public :
+    SessionLog() {} ;
+    SessionLog(int arrSize) ;
+    //precondition : object is initialized
+    // postcondition : a new workout will be added to the sessionLog.
+    void addSet(Workout* obj) ;
+    //precondition : object is initialized
+    // postcondition : a workout object is passed and if it has
+    //      the same values as one of the objects in the sessionLog,
+    //      that object will be removed.
+    void removeSet(Workout removeThis) ;
+    //precondition : object is initialized
+    // postcondition : increases the size of the dynamically allocated
+    //          array.
+    void increaseSize() ;
+    // precondition : object is in a valid state and can be edited
+    // postCondition : object is in an invalid state and cannot be edited.
+    void justDoIt() ;
+    // precondition : object is initialized
+    // postcondition : a summary of the object will be returned as
+    //              a string.
+    const string shareSession() ;
+    // precondition : two objects are initialized.
+    // postcondition : same as +=, newSession will be added to
+    //              the end of the sessionLog.
+    void buildSession(SessionLog newSession) ;
+    // helper copy funciton .
+    void copy(const SessionLog& src) ;
+    // precondition : NA
+    // postcondition : no change,checks if the object with same values
+    //      exist in sessionLog or not
+    int exists(Workout) ;
+    // desctription : assignment overloaded operator
+     //             copy's the values from the right hand side to the left
+     //             handside without memory leak.
+    SessionLog& operator= (const SessionLog& src) ;
+    // copy constructor
+    SessionLog(const SessionLog& src) ;
+    // move copy constructor
+    SessionLog(SessionLog&& src) ;
+    // move assignment operator.
+    SessionLog& operator=(SessionLog&& src) ;
+    // destructor
+    ~SessionLog() ;
+    //precondition : both objects are defined
+    //post condition : object will be updated with values of the rhs added
+    //                 to the end of the sessionLog.
+    //description : this operator can replace buildSesshion function
+    //              it will add two workout objects together and pass
+    //              the new sessionLog
+    SessionLog& operator+=(SessionLog& src) ;
+    //precondition : sessionLog object is initialized
+    //post condition : object reads in from a file, or
+    //          any readable source into the object and the
+    //          format of PA4 examples should be followed for the files.
+    // description : this operator is needed to read the sessions from different files.
+    //      also for better demonstration of the objects Workout :: setValues is called
+    //      on each workout object that is read from the files.
+    friend istream& operator>> (istream& in, SessionLog& dt) ;
+    // sessionLog object is fully constructed
+    // postCondition : no change to object.
+    // description : values of the object are printed out into an external file
+    //              or on the screen based on client needs. no special
+    //              format is followed but can be edited.
+    friend ostream& operator<<(ostream& os, const SessionLog& dt);
+    // precondition : sessionLog object is fully constructed.
+    // postCondition : target metrics of each object is increased by one
+    //          can increase by a different number if client requests
+    // description : this operator follows PA4 requirements to update the
+    //             target metrics of each workout object in the sessionLog
+    SessionLog& operator++(int y) ;
+    // precondition : sessionLog object is fully constructed.
+    // postCondition : target metrics of each object is decremented by one
+    //          can decrease by a different number if client requests
+    // description : this operator complements the increment operator
+    SessionLog& operator--(int y) ;
+    // precondition : two objects are  constructed
+    // postcondition : no changed to any of the objects .
+    // description : this operator enables the client to add a SessionLog
+    //      to another sessionLog object and combine both of the objects.
+    //      the second object's data will be added to the end of the first object's
+    SessionLog operator+(const SessionLog& b) ;
+};
+
+
+#endif //P4_SESSIONLOG_H
+
+
+
+//interface invariant : exists only checks the values and returns the index of
+//                      the first workout with matching values, so in result, the duplicate
+//                      workout objects will not be removed unless client calls the removeSet
+//                      function again passing the same obj.(exists does not work based on address
+//                      and pointers).
+
+// format of the files should be compatible to the program to be readable to sessionLogs.
+// double pointer array is used to prevent slicing of the child objects
